@@ -1,0 +1,71 @@
+/* - - - - - - - Colors - - - - - - - */
+
+/* ----- Light mode ----- */
+
+[data-theme="light"] {
+    --bg: #f9f9f9;
+    --text: #333;
+}
+
+/* ----- Dark mode ----- */
+
+[data-theme="dark"] {
+    --bg: #212121;
+    --text: #fff;
+}
+
+/* - - - - - - - Global - - - - - - - */
+
+:root {}
+
+* {
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow: hidden;
+    background: var(--primary-bg);
+    line-height: 1.6;
+    font-size: 16px;
+    height: 100%;
+}
+
+/* - - - - - - - Display - - - - - - - */
+
+/* ----- Bold ----- */
+
+.bold { font-weight: bold; }
+
+/* ----- Tab Index ----- */
+
+:focus-visible { outline: none; }
+
+/* ----- Scrollbars ----- */
+
+::-webkit-scrollbar { display: none; }
+
+/* - - - - - - - Fonts - - - - - - - */
+
+/* ----- Inter ----- */
+
+@font-face {
+    font-family: Inter;
+    src: url('../fonts/InterVariable.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* - - - - - - - Media Queries - - - - - - - */
+
+/* ----- Medium ----- */
+
+@media (max-width: 1400px) {}
+
+/* ----- Small ----- */
+
+@media (max-width: 700px) {}
