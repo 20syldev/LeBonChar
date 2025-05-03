@@ -1,0 +1,242 @@
+/* - - - - - - - Colors - - - - - - - */
+
+/* ----- Light mode ----- */
+
+[data-theme="light"] {
+    --bg: #f9f9f9;
+    --text: #333;
+}
+
+/* ----- Dark mode ----- */
+
+[data-theme="dark"] {
+    --bg: #212121;
+    --text: #fff;
+}
+
+/* - - - - - - - Global - - - - - - - */
+
+* {
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow: auto;
+    background: var(--primary-bg);
+    line-height: 1.6;
+    font-size: 18px;
+    height: 100%;
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover,
+a:hover path,
+a:focus-visible,
+a:focus-visible path { filter: contrast(0.8); }
+
+svg { vertical-align: sub; }
+path { fill: var(--text); }
+
+/* - - - - - - - Form - - - - - - - */
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px #0000001a;
+}
+
+.page-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: var(--text);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    background: #f9f9f9;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 4px #007bff80;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* - - - - - - - Buttons - - - - - - */
+
+.btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #007bff;
+    color: #fff;
+}
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+/* - - - - - - - Navigation - - - - - - - */
+
+.navigation {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.navigation .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+.navigation .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+.navigation .btn:active {
+    background-color: #003f7f;
+    transform: scale(0.95);
+}
+
+.navigation .btn-back {
+    background-color: #6c757d;
+}
+.navigation .btn-back:hover {
+    background-color: #5a6268;
+}
+.navigation .btn-back:active {
+    background-color: #444e54;
+}
+
+.navigation .btn-cancel {
+    background-color: #dc3545;
+}
+
+.navigation .btn-cancel:hover {
+    background-color: #c82333;
+}
+
+/* - - - - - - - Table - - - - - - - */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background: #f4f4f4;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+table tr:hover {
+    background: #f1f1f1;
+}
+
+/* - - - - - - - Display - - - - - - - */
+
+/* ----- Bold ----- */
+
+.bold { font-weight: bold; }
+
+/* ----- Tab Index ----- */
+
+:focus-visible { outline: none; }
+
+/* ----- Scrollbars ----- */
+
+::-webkit-scrollbar { display: none; }
+
+/* - - - - - - - Fonts - - - - - - - */
+
+/* ----- Inter ----- */
+
+@font-face {
+    font-family: Inter;
+    src: url('../fonts/InterVariable.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* - - - - - - - Media Queries - - - - - - - */
+
+/* ----- Medium ----- */
+
+@media (max-width: 1400px) {}
+
+/* ----- Small ----- */
+
+@media (max-width: 700px) {}
