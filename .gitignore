@@ -1,0 +1,3 @@
+public/images/*
+!public/images/logo.png
+!public/images/defaut.png
