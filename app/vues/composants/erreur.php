@@ -1,0 +1,63 @@
+<?php
+/**
+ * Composant pour afficher une page d'erreur générique
+ * Ce fichier est destiné à être inclus dans les vues d'erreur
+ * Il n'est pas destiné à être utilisé directement
+ */
+?>
+
+<!DOCTYPE html>
+<html lang="fr" data-theme="light" data-mode="auto">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Erreur - LeBonChar</title>
+    <link rel="stylesheet" href="/css/main.css"/>
+    <link rel="icon shortcut" href="/images/logo.png"/>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">Une erreur s'est produite</h1>
+
+        <div class="card">
+            <div class="card-content text-center">
+                <div class="mt-lg mb-lg">
+                    <svg width="64" height="64" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                        <path d="M12 8V12M12 16H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#e74c3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+                <h2 class="form-title">Oups ! Une erreur s'est produite</h2>
+
+                <div class="alert alert-danger">
+                    <p><?= htmlspecialchars($message ?? 'Une erreur inconnue est survenue') ?></p>
+                </div>
+
+                <p class="mb-lg">Nous sommes désolés pour ce désagrément. L'administration a été informée de ce problème.</p>
+
+                <div class="btn-group">
+                    <a href="/" class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <path
+                                d="M12.2796 3.71579C12.097 3.66261 11.903 3.66261 11.7203 3.71579C11.6678 3.7311 11.5754 3.7694 11.3789 3.91817C11.1723 4.07463 10.9193 4.29855 10.5251 4.64896L5.28544 9.3064C4.64309 9.87739 4.46099 10.0496 4.33439 10.24C4.21261 10.4232 4.12189 10.6252 4.06588 10.8379C4.00765 11.0591 3.99995 11.3095 3.99995 12.169V17.17C3.99995 18.041 4.00076 18.6331 4.03874 19.0905C4.07573 19.536 4.14275 19.7634 4.22513 19.9219C4.41488 20.2872 4.71272 20.5851 5.07801 20.7748C5.23658 20.8572 5.46397 20.9242 5.90941 20.9612C6.36681 20.9992 6.95893 21 7.82995 21H7.99995V18C7.99995 15.7909 9.79081 14 12 14C14.2091 14 16 15.7909 16 18V21H16.17C17.041 21 17.6331 20.9992 18.0905 20.9612C18.5359 20.9242 18.7633 20.8572 18.9219 20.7748C19.2872 20.5851 19.585 20.2872 19.7748 19.9219C19.8572 19.7634 19.9242 19.536 19.9612 19.0905C19.9991 18.6331 20 18.041 20 17.17V12.169C20 11.3095 19.9923 11.0591 19.934 10.8379C19.878 10.6252 19.7873 10.4232 19.6655 10.24C19.5389 10.0496 19.3568 9.87739 18.7145 9.3064L13.4748 4.64896C13.0806 4.29855 12.8276 4.07463 12.621 3.91817C12.4245 3.7694 12.3321 3.7311 12.2796 3.71579Z"
+                                fill="currentColor"
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                            />
+                        </svg>
+                        Retour à l'accueil
+                    </a>
+                    <a href="javascript:history.back()" class="btn btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <path d="M19 12H5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Page précédente
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
